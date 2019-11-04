@@ -1,6 +1,10 @@
+/* This is the function used to demonstrate the use a memoization in dynamic programming by sorting through the fibonacci sequence
+	I am aware that this isn't the most efficent way to sort through the fibonacci sequence but it's the one I'm demonstrating.
+ */
+
 var fibo = {1:1,2:1};
 
-function up_down(a){
+function fibonacci(a){
 	if(fibo[a] != null){
 		return fibo[a];
 	}else{
@@ -19,7 +23,7 @@ function call(){
 		document.getElementById("fib").innerHTML ="Please input a positive number";	
 	}else{
 		console.time("mytimer");
-		document.getElementById("fib").innerHTML = up_down(input);
+		document.getElementById("fib").innerHTML = fibonacci(input);
 		console.timeEnd("mytimer");
 		console.log(fibo);
 		fibo = {1:1,2:1};
